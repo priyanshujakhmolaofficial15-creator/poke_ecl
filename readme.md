@@ -17,12 +17,7 @@ pip install -r requirements.txt
 
 **2. Get credentials** — [my.telegram.org](https://my.telegram.org) → API Development Tools → Create app
 
-**3. Generate session string**
-```python
-from pyrogram import Client
-with Client("acc", api_id=YOUR_ID, api_hash="YOUR_HASH") as app:
-    print(app.export_session_string())
-```
+**3. Generate session string** - [string-session genrator](https://telegram.tools/session-string-generator#pyrogram) -> choose account type as user and fill details
 
 **4. Create `.env`**
 ```env
@@ -53,7 +48,7 @@ Prefixes: `. @ # $ % ^ & * ~`
 | `.pattern 1–4`| Set which battle buttons to click        |
 | `.run <type>` | Auto-run from that Pokémon type          |
 | `.run off`    | Disable auto-run                         |
-
+| `.features`    | same as readme but short                 |
 ---
 
 ## Notes
