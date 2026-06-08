@@ -95,7 +95,7 @@ class TextChecker:
                 users_data["poke_dollars"] += int(match.group(1))
             await self._send_hunt()
 
-        elif self.text.endswith(("lost!", "Caught!", "fled!")) or \
+        elif self.text.endswith(("lost!", "Caught!", "Fled!")) or \
                 self.text == "You safely ran away from the wild Pokémon!":
             if self.text.endswith("Caught!"):
                 users_data["poke_caught"] += 1
