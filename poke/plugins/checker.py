@@ -63,6 +63,17 @@ class TextChecker:
             await self._click_button(0, 0)
 
         elif self.text.startswith("Wild"):
+
+            # --- LEVEL CHECK FIRST ---
+            if users_data['mode'] == "poke":
+                level_match = re.search(r"Level\s*:\s*(\d+)", self.text)
+                if level_match:
+                    level = int(level_match.group(1))
+
+                    if level <= 10:
+                        await self._click_button(2, 2)
+
+
             type_match = re.search(r"\[\s*([^\]]+)\s*\]", self.text)
             wild_types = []
 
